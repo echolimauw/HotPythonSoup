@@ -22,7 +22,7 @@ def is_port(portStr):
 	return False
 
 def is_valid_IPv4(ipStr):
-	if re.match(r'^(\d{1,3}\.){3}\d{1,3}$'):
+	if re.match(r'^(\d{1,3}\.){3}\d{1,3}$', ipStr):
 		return True
 	else:
 		return False
@@ -41,7 +41,7 @@ def main():
 		print("Please try again with a valid IPv4 address.")
 
 	if is_port(portStr):
-		port = portStr
+		port = int(portStr)
 	else:
 		print("Please try again with a valid port number.")
 
